@@ -16,6 +16,6 @@
 
 # 实例
 1. 左侧为 1-10数字，右侧为四位不确定顺序的字符
-![img.png](img.png)
+![img.png](data/img/img.png)
 2. 密码为 `*teld***` 
-![img_1.png](img_1.png)
+![img_1.png](data/img/img_1.png)
