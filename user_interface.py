@@ -49,6 +49,7 @@ class UserInterface:
             feature_list.append(feature)
         self.pass_count.set(pass_count)
         self.progressbar['maximum'] = pass_count
+        self.root.update()
         pass_word = self.traversal_excel_pass(self.excel_path.get(), feature_list)
         if pass_word is None:
             tkinter.messagebox.showinfo(title="破解失败", message='破解失败')
@@ -67,9 +68,9 @@ class UserInterface:
             if i % 100 == 0:
                 self.root.update()
                 with open('./pass.log', 'a', encoding='utf-8') as fp:
-                    fp.write('\n'.join(log_list))
+                    fp.write('\n' + '\n'.join(log_list))
                 log_list = []
-            # print(item)
+            print(item)
             self.progressbar['value'] += 1
             if ExcelUnlock.deciphering_execl(item, path):
                 print('密码是：', item)
